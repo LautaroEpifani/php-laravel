@@ -1,0 +1,17 @@
+{
+    "name": "yo/php",
+    "autoload": {
+        "psr-4": {
+            "Yo\\Php\\": "/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lautaro",
+            "email": "epifanilautaro@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
