@@ -147,9 +147,14 @@ $rooms = mysqli_fetch_all($result, MYSQLI_ASSOC);
  />
  </svg>
  </div>
+ 
  <div class="slider">
- <img src=${room.image} alt="" />
+ 
+ 
+ <img src=" <?php echo htmlspecialchars($room['images']) ;?>"  alt="" />
+ 
  </div>
+ 
  </div>
  <div class="description">
  <div class="icons-desktop">
@@ -196,10 +201,10 @@ $rooms = mysqli_fetch_all($result, MYSQLI_ASSOC);
  </div>
  <h1 class="title"><a href="../php/roomDetails.php"><?php echo htmlspecialchars($room['title']); ?></a></h1>
  <p class="text">
- ${room.description}
+ <?php echo htmlspecialchars($room['description']); ?>
  </p>
  <div class="text-container">
- <h1 class="price">${room.price}<span class="night">/Night</span></h1>
+ <h1 class="price"><?php echo htmlspecialchars($room['price']); ?><span class="night">/Night</span></h1>
  <h6>Booking Now</h6>
  </div>
  </div>
