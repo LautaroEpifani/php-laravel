@@ -5,10 +5,10 @@ $getAllRooms = 'SELECT * FROM rooms';
 
 $result = mysqli_query($connection, $getAllRooms);
 
-$rooms = mysqli_fetch_all($result, MYSQLI_ASSOC); 
+$rooms = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-$offers_one = array_slice($rooms,1,3);
-$offers_two = array_slice($rooms,6,9);
+$offers_one = array_slice($rooms, 1, 3);
+$offers_two = array_slice($rooms, 6, 9);
 $offers = array_merge($offers_one, $offers_two)
 
 // print_r($rooms);
@@ -69,53 +69,53 @@ $offers = array_merge($offers_one, $offers_two)
                 <div class="row">
                   <div class="column">
                     <h6>
-                      <span><img src="../../php/src/assets/acondicionador-de-aire.png" alt="" /></span>Air conditioner
+                      <span><img src="" alt="" /></span>Air conditioner
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/desayuno.png" alt="" /></span>Breakfast
+                      <span><img src="" alt="" /></span>Breakfast
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/cleaning.png" alt="" /></span>Cleaning
+                      <span><img src="" alt="" /></span>Cleaning
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/comida.png" alt="" /></span>Grocery
+                      <span><img src="" alt="" /></span>Grocery
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/shop.png" alt="" /></span>Shop
+                      <span><img src="" alt="" /></span>Shop
                       near
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/apoyo.png" alt="" /></span>24/7
+                      <span><img src="" alt="" /></span>24/7
                       Online Support
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/seguridad.png" alt="" /></span>Smart Security
+                      <span><img src="" alt="" /></span>Smart Security
                     </h6>
                   </div>
                   <div class="column">
                     <h6>
-                      <span><img src="../../php/src/assets/wifi.png" alt="" /></span>High
+                      <span><img src="" alt="" /></span>High
                       speed Wifi
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/cocina.png" alt="" /></span>Kitchen
+                      <span><img src="" alt="" /></span>Kitchen
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/ducha.png" alt="" /></span>Shower
+                      <span><img src="" alt="" /></span>Shower
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/cama.png" alt="" /></span>Single
+                      <span><img src="" alt="" /></span>Single
                       Bed
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/toalla.png" alt="" /></span>Towers
+                      <span><img src="" alt="" /></span>Towers
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/clave.png" alt="" /></span>Stron
+                      <span><img src="" alt="" /></span>Stron
                       Locker
                     </h6>
                     <h6>
-                      <span><img src="../../php/src/assets/lider.png" alt="" /></span>Expert
+                      <span><img src="" alt="" /></span>Expert
                       Team
                     </h6>
                   </div>
@@ -132,56 +132,56 @@ $offers = array_merge($offers_one, $offers_two)
     <div class="container-grid">
       <div class="row">
         <div class="column">
-        <h6>
-                      <span><img src="../../php/src/assets/acondicionador-de-aire.png" alt="" /></span>Air conditioner
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/desayuno.png" alt="" /></span>Breakfast
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/cleaning.png" alt="" /></span>Cleaning
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/comida.png" alt="" /></span>Grocery
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/shop.png" alt="" /></span>Shop
-                      near
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/apoyo.png" alt="" /></span>24/7
-                      Online Support
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/seguridad.png" alt="" /></span>Smart Security
-                    </h6>
-                  </div>
-                  <div class="column">
-                    <h6>
-                      <span><img src="../../php/src/assets/wifi.png" alt="" /></span>High
-                      speed Wifi
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/cocina.png" alt="" /></span>Kitchen
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/ducha.png" alt="" /></span>Shower
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/cama.png" alt="" /></span>Single
-                      Bed
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/toalla.png" alt="" /></span>Towers
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/clave.png" alt="" /></span>Stron
-                      Locker
-                    </h6>
-                    <h6>
-                      <span><img src="../../php/src/assets/lider.png" alt="" /></span>Expert
-                      Team
-                    </h6>
+          <h6>
+            <span><img src="../../php/src/assets/acondicionador-de-aire.png" alt="" /></span>Air conditioner
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/desayuno.png" alt="" /></span>Breakfast
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/cleaning.png" alt="" /></span>Cleaning
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/comida.png" alt="" /></span>Grocery
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/sex-shop.png" alt="" /></span>Shop
+            near
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/apoyo.png" alt="" /></span>24/7
+            Online Support
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/seguridad.png" alt="" /></span>Smart Security
+          </h6>
+        </div>
+        <div class="column">
+          <h6>
+            <span><img src="../../php/src/assets/wifi.png" alt="" /></span>High
+            speed Wifi
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/cocina.png" alt="" /></span>Kitchen
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/ducha.png" alt="" /></span>Shower
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/cama.png" alt="" /></span>Single
+            Bed
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/toalla.png" alt="" /></span>Towers
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/clave.png" alt="" /></span>Stron
+            Locker
+          </h6>
+          <h6>
+            <span><img src="../../php/src/assets/lider.png" alt="" /></span>Expert
+            Team
+          </h6>
         </div>
       </div>
     </div>
@@ -224,10 +224,7 @@ $offers = array_merge($offers_one, $offers_two)
           </svg>
         </div>
         <div class="slider">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+          <img src="../../php/src/assets/room3.jpg" alt="" />
         </div>
         <button class="left">
           <img src="../../php/src/assets/left.png" alt="" />

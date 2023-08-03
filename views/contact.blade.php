@@ -88,28 +88,28 @@ if (isset($_POST['submit'])) {
     <div class="blog-contact__container">
         <div class="card-container">
             <div class="card-contact">
-                <img src="../../assets/phone.png" alt="" />
+                <img src="../../php/src/assets/phone.png" alt="" />
                 <div>
                     <h1 class="title">Phone Number</h1>
                     <h6 class="text">+984 654 864 17 434</h6>
                 </div>
             </div>
             <div class="card-contact">
-                <img src="../../assets/message.png" alt="" />
+                <img src="../../php/src/assets/message.png" alt="" />
                 <div>
                     <h1 class="title">Email</h1>
                     <h6 class="text">hotelmiranda@gmail.com</h6>
                 </div>
             </div>
             <div class="card-contact">
-                <img src="../../assets/map.png" alt="" />
+                <img src="../../php/src/assets/map.png" alt="" />
                 <div>
                     <h1 class="title">Find Us</h1>
                     <h6 class="text">Crazy Avenue 54, Oklahoma</h6>
                 </div>
             </div>
         </div>
-        <div class="image"><img src="./assets/map.png" alt=""></div>
+        <div class="image"><img src="../../php/src/assets/contact/map.png" alt=""></div>
         <?php if ($submit) :  ?> <div class="submit-message-container">
                 <h1>Thank you very much,</h1>
                 <h4>Your message has been sent successfully!</h4>
@@ -119,35 +119,35 @@ if (isset($_POST['submit'])) {
                 <div class="container-inputs">
                     <div class="container-input">
                         <div class="input">
-                            <img src="./assets/user.png" alt="" />
+                            <img src="../../php/src/assets/contact/user.png"" alt="" />
                             <input type="text" name="fullName" placeholder="Your full name" value="<?php echo htmlspecialchars($fullName) ?>">
                             <div class="input-error"> <?php echo $errors['fullName'] ?></div>
                         </div>
                     </div>
                     <div class="container-input">
                         <div class="input">
-                            <img src="./assets/phone.png" alt="" />
+                            <img src="../../php/src/assets/contact/phone.png" alt="" />
                             <input type="text" name="phone" placeholder="Add phone number" value="<?php echo htmlspecialchars($phone) ?>">
                             <div class="input-error"><?php echo $errors['phone'] ?></div>
                         </div>
                     </div>
                     <div class="container-input">
                         <div class="input">
-                            <img src="./assets/message.png" alt="" />
+                            <img src="../../php/src/assets/contact/message.png" alt="" />
                             <input type="text" name="email" placeholder="Enter email adress" value="<?php echo htmlspecialchars($email) ?>">
                             <div class="input-error"><?php echo $errors['email'] ?></div>
                         </div>
                     </div>
                     <div class="container-input">
                         <div class="input">
-                            <img src="./assets/book.png" alt="" />
+                            <img src="../../php/src/assets/contact/book.png" alt="" />
                             <input type="text" name="subject" placeholder="Enter subject" value="<?php echo htmlspecialchars($subject) ?>">
                             <div class="input-error"><?php echo $errors['subject'] ?></div>
                         </div>
                     </div>
                     <div class="container-input">
                         <div class="input">
-                            <img src="./assets/pen.png" alt="" />
+                            <img src="../../php/src/assets/contact/pen.png" alt="" />
                             <input type="text" name="message" placeholder="Enter message" value="<?php echo htmlspecialchars($message) ?>">
                             <div class="input-error"><?php echo $errors['message'] ?></div>
                         </div>
@@ -162,7 +162,7 @@ if (isset($_POST['submit'])) {
     @endsection
     @section('scripts')
 </main>
-<script src="../../js/index.js"></script>
+<script src="../../php/src/js/index.js"></script>
 </body>
 
 </html>
