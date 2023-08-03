@@ -144,6 +144,8 @@
   .about-cards .column .images .table {
     width: 20px;
   }
+
+  
   
   @media (min-width: 1200px) {
     .nav__container {
@@ -1184,6 +1186,24 @@
     height: 200px;
     width: 100%;
   }
+  .blog-contact__container .submit-message-container {
+    height: 300px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .blog-contact__container .submit-message-container h1{
+    color: #bdac8d;
+    margin-bottom: 40px;
+  }
+  .blog-contact__container .submit-message-container h4{
+    color: #999999;
+  }
   .blog-contact__container .contact-inputs {
     margin-top: 40px;
     padding: 20px;
@@ -1207,6 +1227,11 @@
     padding-bottom: 20px;
     padding-top: 20px;
   }
+
+  .blog-contact__container .contact-inputs .container-input .input .input-error {
+    color: #FF5733;
+  }
+
   .blog-contact__container .contact-inputs .container-input .input input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1222,6 +1247,9 @@
     font-family: "Roboto", sans-serif;
     font-weight: 400;
   }
+  
+  
+
   .blog-contact__container .contact-inputs .container-input .input-icon {
     font-weight: 100;
     color: #000;
@@ -1425,10 +1453,32 @@
   .home-hero__container {
     background-color: #333333;
     margin-top: 80px;
-    background-image: url("../images/home/terracenight.jpg");
+    background-image: url("../../php/src/assets/terracenight.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .home-hero__container .submit-message-container {
+    height: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #FFF;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #bdac8d;
+  }
+
+  .home-hero__container .submit-message-container h1{
+    color: #f8f8f8;
+    margin-bottom: 10px;
+    font-family: 'Archivo' , sans-serif;
+  }
+  .home-hero__container .submit-message-container h4{
+    color: #FFF;
+    font-family: 'Archivo' , sans-serif;
+  }
+
   .home-hero__container .text {
     display: flex;
     flex-direction: column;
@@ -1762,7 +1812,7 @@
   .rooms__container .slider-container .btn-left {
     left: 0;
     background-color: #fff;
-    background-image: url("../assets/left.png");
+    background-image: url("../../php/src/assets/left.png");
     background-size: 5px;
     background-repeat: no-repeat;
     background-position: center;
@@ -1770,7 +1820,7 @@
   .rooms__container .slider-container .btn-right {
     right: 0;
     background-color: #bead8e;
-    background-image: url("../assets/right.png");
+    background-image: url("../../php/src/assets/right.png");
     background-size: 5px;
     background-repeat: no-repeat;
     background-position: center;

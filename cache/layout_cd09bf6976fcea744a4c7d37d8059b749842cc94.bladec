@@ -33,14 +33,14 @@
  <div class="navbar">
  <div class="logo">
  <button class="btn btn__menu" id="open">
- <img src="../../assets/menu.png" alt="" width="18" />
+ <img src="../../php/src/assets/menu.png" alt="" width="18" />
  </button>
  <button class="btn btn__close--click" id="close">
- <img src="../../assets/close.png" alt="" width="18" />
+ <img src="../../php/src/assets/close.png" alt="" width="18" />
  </button>
  <img
  class="logo-img"
- src="../../assets/H.png"
+ src="../../php/src/assets/H.png"
  alt=""
  width="20"
  height="20"
@@ -102,7 +102,7 @@
 <div class="global-services-container">
  <div class="social__container">
  <div class="container-logo">
- <div class="logo"><img src="./assets/H_nobg.png" alt="" /></div>
+ <div class="logo"><img src="../../php/src/assets/H_nobg.png" alt="" /></div>
  <h1 class="logo-title">
  <span class="bold">Hotel</span><br />Miranda
  </h1>
@@ -216,21 +216,21 @@
  <div class="contact__container">
  <h1 class="title">Contact Us.</h1>
  <div class="card-contact">
- <img src="../../assets/phone.png" alt="" />
+ <img src="../../php/src/assets/phone.png" alt="" />
  <div>
  <h1 class="title">Phone Number</h1>
  <h6 class="text">+984 654 864 17 434</h6>
  </div>
  </div>
  <div class="card-contact">
- <img src="../../assets/message.png" alt="" />
+ <img src="../../php/src/assets/message.png" alt="" />
  <div>
  <h1 class="title">Email</h1>
  <h6 class="text">hotelmiranda@gmail.com</h6>
  </div>
  </div>
  <div class="card-contact">
- <img src="../../assets/map.png" alt="" />
+ <img src="../../php/src/assets/map.png" alt="" />
  <div>
  <h1 class="title">Find Us</h1>
  <h6 class="text">Crazy Avenue 54, Oklahoma</h6>

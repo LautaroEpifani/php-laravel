@@ -15,8 +15,8 @@
       </div>
       <div class="about-video__container">
         <div class="video">
-          <video preload="none" id="video" poster="../src/assets/video.jpg">
-            <source type="video/mp4" src="../src/assets/hotelvideo.mp4" />
+          <video preload="none" id="video" poster="../../php/src/assets/video.jpg">
+            <source type="video/mp4" src="../../php/src/assets/hotelvideo.mp4" />
           </video>
           <div class="circle" id="circle">
             <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,26 +36,26 @@
         <div class="row">
           <div class="column">
             <div class="card">
-              <img class="normal" src="./assets/coffee.png" alt="" width="60" height="60"/>
-              <img class="hover" src="./assets/coffee-white.png" alt="" width="60" height="60"/>
+              <img class="normal" src="../../php/src/assets/coffee.png" alt="" width="60" height="60"/>
+              <img class="hover" src="../../php/src/assets/coffee-white.png" alt="" width="60" height="60"/>
               <h6 class="text">breakfast</h6>
             </div>
             <div class="card">
-              <img class="normal" src="./assets/maps.png" alt="" width="60" height="60"/>
-              <img  class="hover" src="./assets/maps-white.png" alt="" width="60" height="60"/>
+              <img class="normal" src="../../php/src/assets/maps.png" alt="" width="60" height="60"/>
+              <img  class="hover" src="../../php/src/assets/maps-white.png" alt="" width="60" height="60"/>
               <h6 class="text">city guide</h6>
             </div>
           </div>
           <div class="column">
             <div class="card">
-              <img class="normal" src="./assets/brown-plane.png" alt="" width="60" height="60"/>
-              <img class="hover" src="./assets/plane.png" alt="" width="60" height="60"/>
+              <img class="normal" src="../../php/src/assets/brown-plane.png" alt="" width="60" height="60"/>
+              <img class="hover" src="../../php/src/assets/plane.png" alt="" width="60" height="60"/>
               <h6 class="brown">airport pickup</h6>
             </div>
             <div class="card">
               <div class="images">
-                <img class="normal" src="./assets/sofa.png" alt="" width="60" height="60">
-                <img class="hover" src="./assets/sofa-white.png" alt="" width="60" height="60">
+                <img class="normal" src="../../php/src/assets/sofa.png" alt="" width="60" height="60">
+                <img class="hover" src="../../php/src/assets/sofa-white.png" alt="" width="60" height="60">
               </div>
               <h6 class="text">luxury room</h6>
             </div>
@@ -64,7 +64,7 @@
       </div>
       <div class="restaurant__container">
         <div class="about-image">
-          <img src="./assets/rest.jpg" alt="">
+          <img src="../../php/src/assets/rest.jpg" alt="">
         </div>
         <div class="text-container">
         <h6>restaurant</h6>
@@ -124,7 +124,7 @@
           </div>
           <div class="filter-container">
             <div class="card-slider">
-              <img class="icon" src="./assets/clock.png" alt="" />
+              <img class="icon" src="../../php/src/assets/clock.png" alt="" />
               <h1 class="number">02</h1>
             </div>
             <h1 class="title">Quiet Hours</h1>
@@ -169,7 +169,7 @@
           </div>
           <div class="filter-container">
             <div class="card-slider">
-              <img class="icon" src="./assets/clock.png" alt="" />
+              <img class="icon" src="../../php/src/assets/clock.png" alt="" />
               <h1 class="number">04</h1>
             </div>
             <h1 class="title">Free Cancellation</h1>
@@ -232,7 +232,7 @@
           </div>
           <div class="filter-container">
             <div class="card-slider">
-              <img class="icon" src="./assets/ribbon.png" alt="" />
+              <img class="icon" src="../../php/src/assets/ribbon.png" alt="" />
               <h1 class="number">06</h1>
             </div>
             <h1 class="title">Special Offers</h1>
@@ -258,7 +258,7 @@
         <div class="container-cards">
         <div class="counter-card">
           <div class="card">
-            <img class="image-space" src="./assets/client.png" alt="" />
+            <img class="image-space" src="../../php/src/assets/client.png" alt="" />
             <div>
               <h1>8000</h1>
               <h6>Happy Users</h6>
@@ -270,43 +270,42 @@
           <div class="card">
             <div class="reviews">
               <div class="stars">
-                <img src="./assets/small-star.png" alt="" />
-                <img src="./assets/big-star.png" alt="" />
-                <img src="./assets/small-star.png" alt="" />
+                <img src="../../php/src/assets/small-star.png" alt="" />
+                <img src="../../php/src/assets/big-star.png" alt="" />
+                <img src="../../php/src/assets/small-star.png" alt="" />
               </div>
-              <img src="./assets/rev.png" alt="" />
+              <img src="../../php/src/assets/rev.png" alt="" />
             </div>
             <div>
               <h1>10M</h1>
               <h6>Reviews & Appriciate</h6>
             </div>
           </div>
-          <img src="./assets/arrow.png" alt="" width="25" height="10" />
+          <img src="../../php/src/assets/arrow.png" alt="" width="25" height="10" />
         </div>
         <div class="counter-card">
           <div class="card">
-            <img class="image-space" src="./assets/planet.png" alt="" />
+            <img class="image-space" src="../../php/src/assets/planet.png" alt="" />
             <div>
               <h1>100</h1>
               <h6>Country Coverage</h6>
             </div>
           </div>
-          <img src="./assets/arrow.png" alt="" width="25" height="10" />
+          <img src="../../php/src/assets/arrow.png" alt="" width="25" height="10" />
         </div>
         </div>
         <div class="about-image">
-          <img src="./assets/fun.jpg" alt="">
-          <img class="visible-hidden" src="./assets/guys.jpg" alt="">
+          <img src="../../php/src/assets/fun.jpg" alt="">
+          <img class="visible-hidden" src="../../php/src/assets/guys.jpg" alt="">
         </div>
 </div>
 @endsection      
 @section('scripts')
 </main>
-<script src="../../js/index.js"></script>
-    <script src="../../js/router.js"></script>
-    <script src="../../js/video.js"></script>
-    <script src="../../js/aboutHover.js"></script>
-    <script src="../../js/cardsSlider.js"></script>
+<script src="../../php/src/js/index.js"></script>
+    <script src="../../php/src/js/cardsSlider.js"></script>
+    <script src="../../php/src/js/video.js"></script>
+    <script src="../../php/src/js/aboutHover.js"></script>
   </body>
 </html>
 @endsection

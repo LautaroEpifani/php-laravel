@@ -1,3 +1,50 @@
+<?php
+include('./db.php');
+
+$arrival = $departure = '';
+$submit = false;
+$errors = array('arrival' => '', 'departure' => '');
+
+
+if (isset($_POST['submit'])) {
+
+    if (empty($_POST['arrival'])) {
+        $subject = $_POST['arrival'];
+        $errors['arrival'] = 'Field Arrival is required <br />';
+    }
+
+
+    if (empty($_POST['departure'])) {
+        $message = $_POST['departure'];
+        $errors['departure'] = 'Field Departure is required <br />';
+    }
+
+    if (array_filter($errors)) {
+        //fail, display errors
+    } else {
+        //submit ok
+        $guest = "Check Availability";
+        $room_id = 1;
+        $arrival = mysqli_real_escape_string($connection, $_POST['arrival']);
+        $departure = mysqli_real_escape_string($connection, $_POST['departure']);
+        $order_date = date('Y-m-d H:i:s');
+        $special_request = " ";
+        $status = "Check In";
+        $room_number = 0;
+        $color = " ";
+        $bgrColor = " ";
+
+        $sql = "INSERT INTO bookings(guest, room_id, check_in, check_out, order_date, special_request, status, room_number, color, bgrColor)
+         VALUES('$guest', '$room_id', '$arrival', '$departure', '$order_date', '$special_request', '$status', '$room_number', '$color', '$bgrColor')";
+        if (mysqli_query($connection, $sql)) {
+            $submit = true;
+        } else {
+            echo 'query error: ' . mysqli_error($connection);
+        }
+    }
+}
+?>
+
 @extends('layout')
 @section('content')
 <div class="home-hero__container">
@@ -9,19 +56,25 @@
           <button class="learn-more">Lean more</button>
           </div>
         </div>
-        <div class="date-check">
+        <?php if ($submit) :  ?> <div class="submit-message-container">
+                <h1>Thank you very much,</h1>
+                <h4>These dates are available!</h4>
+            </div>
+        <?php else : ?>
+        <form class="date-check" action="index.php" method="POST">
           <div class="container-input">
             <label for="">Arrival Date</label>
-
-            <input type="date" />
+            <input type="date" name="arrival"/>
+            <div class="input-error"> <?php echo $errors['arrival'] ?></div>
           </div>
           <div class="container-input">
             <label for="">Departure Date</label>
-
-            <input type="date"/>
+            <input type="date" name="departure"/>
+            <div class="input-error"> <?php echo $errors['departure'] ?></div>
           </div>
-          <button class="btn-check">Check availability</button>
-        </div>
+          <button type="submit" name="submit" class="btn-check">Check availability</button>
+      </form>
+      <?php endif; ?>
       </div>
     </header>
     <main>
@@ -41,10 +94,10 @@
         <div class="container-team">
         <div class="team">
           <div class="img">
-            <img src="../../images/home/team.jpg" alt="" />
+            <img src="../../php/src/assets/team.jpg" alt="" />
           </div>
           <div class="description">
-            <img src="./assets/people.png" alt="" />
+            <img src="../../php/src/assets/people.png" alt="" />
             <h1>Strong Team</h1>
             <p>
               Lorem ipsum ipsum dolor sit amet consectetur adipisicing elit.
@@ -54,11 +107,11 @@
         </div>
         <div class="luxury">
           <div class="img">
-            <img src="../../images/home/room.jpg" alt="" />
+            <img src="../../php/src/assets/room.jpg" alt="" />
           </div>
           <div class="luxury-description">
             <div class="img-black">
-              <img src="./assets/calendar.png" alt="" />
+              <img src="../../php/src/assets/calendar.png" alt="" />
               <h1>Luxury Room</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -174,21 +227,21 @@
             </svg>
           </div>
           <div class="images-container">
-            <img src="../../images/home/room2.jpg" alt="" class="image-slider active" id="first_image" />
+            <img src="../../php/src/assets/room2.png" alt="" class="image-slider active" id="first_image" />
             <img
-              src="../../images/home/luxury.jpg"
+              src="../../php/src/assets/luxury.jpg"
               alt=""
               class="image-slider active"
               id="first_image"
             />
             <img
-              src="../../images/home/room3.jpg"
+              src="../../php/src/assets/room3.jpg"
               alt=""
               class="image-slider"
               id="second_image"
             />
             <img
-              src="../../images/home/room6.jpg"
+              src="../../php/src/assets/room6.jpg"
               alt=""
               class="image-slider"
               id="third_image"
@@ -223,8 +276,8 @@
         <button class="btn-book">BOOK NOW</button>
         </div>
         <div class="video">
-          <video preload="none" id="video" poster="./assets/video.jpg">
-            <source type="video/mp4" src="../../assets/hotelvideo.mp4" />
+          <video preload="none" id="video" poster="../../php/src/assets/video.jpg">
+            <source type="video/mp4" src="../../php/src/assets/hotelvideo.mp4" />
           </video>
           <div class="circle" id="circle">
             <svg
@@ -291,7 +344,7 @@
           </div>
           <div class="filter-container">
             <div class="card-slider">
-              <img class="icon" src="./assets/clock.png" alt="" />
+              <img class="icon" src="../../php/src/assets/clock.png" alt="" />
               <h1 class="number">02</h1>
             </div>
             <h1 class="title">Quiet Hours</h1>
@@ -336,7 +389,7 @@
           </div>
           <div class="filter-container">
             <div class="card-slider">
-              <img class="icon" src="./assets/clock.png" alt="" />
+              <img class="icon" src="../../php/src/assets/clock.png" alt="" />
               <h1 class="number">04</h1>
             </div>
             <h1 class="title">Free Cancellation</h1>
@@ -399,7 +452,7 @@
           </div>
           <div class="filter-container">
             <div class="card-slider">
-              <img class="icon" src="./assets/ribbon.png" alt="" />
+              <img class="icon" src="../../php/src/assets/ribbon.png" alt="" />
               <h1 class="number">06</h1>
             </div>
             <h1 class="title">Special Offers</h1>
@@ -421,8 +474,8 @@
       </div>
       <div class="menu__container-icon">
         <div class="food-icon">
-          <img class="foodimg" src="./assets/food.png" alt="" />
-          <img class="foodCompleteimg" src="./assets/foodComplete.png" alt="" />
+          <img class="foodimg" src="../../php/src/assets/food.png" alt="" />
+          <img class="foodCompleteimg" src="../../php/src/assets/foodComplete.png" alt="" />
         </div>
         <div class="container-menu">
           <div class="container-text">
@@ -432,7 +485,7 @@
           <div class="container-cards">
           <div class="container-card-menu active">
             <div class="card-menu">
-              <img class="img" src="./assets/eggs-bacon.png" alt="" />
+              <img class="img" src="../../php/src/assets/eggs-bacon.png" alt="" />
               <div class="text-container">
                 <h1 class="subtitle">Eggs & Bacon</h1>
                 <p class="text">
@@ -442,7 +495,7 @@
               </div>
             </div>
             <div class="card-menu">
-              <img class="img" src="./assets/coffee.jpg" alt="" />
+              <img class="img" src="../../php/src/assets/coffee.jpg" alt="" />
               <div class="text-container">
                 <h1 class="subtitle">Tea or Coffee</h1>
                 <p class="text">
@@ -452,7 +505,7 @@
               </div>
             </div>
             <div class="card-menu">
-              <img class="img" src="./assets/chia.jpg" alt="" />
+              <img class="img" src="../../php/src/assets/chia.jpg" alt="" />
               <div class="text-container">
                 <h1 class="subtitle">Chia Oatmeal</h1>
                 <p class="text">
@@ -464,7 +517,7 @@
           </div>
           <div class="container-card-menu">
             <div class="card-menu">
-              <img class="img" src="./assets/fruit.jpg" alt="" />
+              <img class="img" src="../../php/src/assets/fruit.jpg" alt="" />
               <div class="text-container">
                 <h1 class="subtitle">Fruit Parfait</h1>
                 <p class="text">
@@ -474,7 +527,7 @@
               </div>
             </div>
             <div class="card-menu">
-              <img class="img" src="./assets/marme.jpg" alt="" />
+              <img class="img" src="../../php/src/assets/marme.jpg" alt="" />
               <div class="text-container">
                 <h1 class="subtitle">Marmelade Selection</h1>
                 <p class="text">
@@ -484,7 +537,7 @@
               </div>
             </div>
             <div class="card-menu">
-              <img class="img" src="./assets/cheese.jpg" alt="" />
+              <img class="img" src="../../php/src/assets/cheese.jpg"alt="" />
               <div class="text-container">
                 <h1 class="subtitle">Cheese Plate</h1>
                 <p class="text">
@@ -541,22 +594,22 @@
       <div class="stats__container">
        
         <div class="stats-card">
-          <img src="./assets/ship.png" alt="" />
+          <img src="../../php/src/assets/ship.png" alt="" />
           <h1 class="title">84k<span class="plus">+</span></h1>
           <h6 class="text">Projects are Completed</h6>
         </div>
         <div class="stats-card">
-          <img src="./assets/people.png" alt="" />
+          <img src="../../php/src/assets/people.png" alt="" />
           <h1 class="title">10M<span class="plus">+</span></h1>
           <h6 class="text">Active Backers Around World</h6>
         </div>
         <div class="stats-card">
-          <img src="./assets/money.png" alt="" />
+          <img src="../../php/src/assets/money.png" alt="" />
           <h1 class="title">02k<span class="plus">+</span></h1>
           <h6 class="text">Categories Served</h6>
         </div>
         <div class="stats-card">
-          <img src="./assets/book.png" alt="" />
+          <img src="../../php/src/assets/book.png" alt="" />
           <h1 class="title">100M<span class="plus">+</span></h1>
           <h6 class="text">Idea Raised Funds</h6>
         </div>
@@ -565,11 +618,10 @@
       @endsection      
       @section('scripts')
     </main>
-    <script src="../../js/index.js"></script>
-    <script src="../../js/router.js"></script>
-    <script src="../../js/slider.js"></script>
-    <script src="../../js/cardsSlider.js"></script>
-    <script src="../../js/video.js"></script>
+    <script src="../../php/src/js/index.js"></script>
+    <script src="../../php/src/js/slider.js"></script>
+    <script src="../../php/src/js/cardsSlider.js"></script>
+    <script src="../../php/src/js/video.js"></script>
   </body>
 </html>
 @endsection
