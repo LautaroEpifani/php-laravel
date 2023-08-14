@@ -52,16 +52,16 @@
           </div>
           <ul class="nav__list" id="list">
             <li class="nav__li nav__li--first">
-              <a class="nav__item" href="../php/about.php" id="a_whyus">About&nbspUs</a>
+              <a class="nav__item" href="../php/about" id="a_whyus">About&nbspUs</a>
             </li>
             <li class="nav__li">
-              <a class="nav__item" href="../php/rooms.php">Rooms</a>
+              <a class="nav__item" href="../php/rooms">Rooms</a>
             </li>
             <li class="nav__li">
-              <a class="nav__item" href="../php/offers.php">Offers</a>
+              <a class="nav__item" href="../php/offers">Offers</a>
             </li>
             <li class="nav__li">
-              <a class="nav__item" href="../php/contact.php">Contact</a>
+              <a class="nav__item" href="../php/contact">Contact</a>
             </li>
           </ul>
           <div class="icons-nav">
